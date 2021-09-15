@@ -6,6 +6,12 @@ const navActive= ()=>{
         navLinks.classList.toggle('nav-active')
         hamburger.classList.toggle('close')
     })
+    document.onclick = function (e) {
+        if (e.target.id !== 'nav-links' && e.target.id !== 'hamburger') {
+            navLinks.classList.remove("nav-active");
+            hamburger.classList.remove("close");
+        }
+    }
 }
 navActive()
 
