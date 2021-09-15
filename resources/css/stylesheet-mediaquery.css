@@ -1,0 +1,168 @@
+@media screen and (max-width:900px) {
+    body{
+        width: 100%;
+    }    
+    .desktop-images,.nav-links{
+        display: none;
+    }
+    .mobile-images,.hamburger, .nav-links svg{
+        display: block;
+    }
+    /* Header section */
+    #header{
+        min-height: 150vh;
+        background: url("../images/mobile/image-header.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+        #nav-bar{
+            width: 100%;
+            position: relative;
+        }
+            .hamburger{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+                width: 30px;
+                height: 30px;
+                cursor: pointer;
+            }
+                .hamburger span{
+                    display: flex;
+                    width: 100%;
+                    height: 2px;
+                    background-color: white;
+                    transition: all 0.5s linear;
+                }
+                .close .line1{
+                    transform: rotate(-45deg) translate(-7px,7px);
+                    width: calc(100% + 7px);
+                }
+                .close .line2{
+                    opacity: 0;
+                }
+                .close .line3{
+                    transform: rotate(45deg) translate(-7px,-7px);
+                    width: calc(100% + 7px);
+                }
+            /* navigation display */
+            .nav-links{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                position: absolute;
+                right: 5em;
+                top: 8em;
+                width: 80%;
+                max-width: 300px;
+                padding: 3em;
+                z-index: 10;
+                background-color: white;
+                border-radius: 1em;
+                border-top-right-radius: 0;
+                transform: scale(0);
+                transform-origin: top right;
+                transition: .5s linear;
+            }
+            .nav-active{
+                transform: scale(1);
+            }
+                .nav-links li a{
+                    color: hsl(232, 10%, 55%);
+                }
+                    .nav-links li a:hover{
+                        color: hsl(198, 62%, 26%);
+                    }
+                    .nav-links li a::after{
+                        background-color: hsl(198, 62%, 26%);
+                    }
+                .nav-links button{
+                    background-color: hsl(51, 100%, 49%);
+                }
+                    .nav-links button:hover{
+                        color: hsl(198, 62%, 26%);
+                        background-color: hsla(51, 100%, 49%, 0.582);
+                    }
+                .nav-links svg{
+                    position: absolute;
+                    top: -35px;
+                    right: 0;
+                    width: 35px;
+                    height: 35px;
+                }
+                    polygon{
+                        fill: white;
+                    }
+            /* end of navigationdisplay */
+        #intro{
+            text-align: center;
+            max-width: 70%;
+            gap: 6em;
+        }
+    /* End of the header */
+
+    /* Main section */
+    #contaienr{
+        width: 100%;
+    }
+        #about{
+            grid-template-columns: 100%;
+            grid-template-rows: repeat(6, 1fr);
+        }
+            .box-learn-more{
+                align-items: center;
+                padding:3em 2em;
+                text-align: center;
+            }
+                .transform{
+                    grid-row: 2/3;
+                }
+                .stand-out{
+                    grid-column: unset;
+                    grid-row: 4/5;
+                }
+            .box-fruits{
+                position: relative;
+                background-repeat: no-repeat;
+            }
+        #services{
+            width: 100%;
+            text-align: center;
+        }
+            .testimonials{
+                flex-direction: column;
+            }
+                .testimonials img{
+                    width: 50px;
+                    height: 50px;
+                }
+        #projects{
+            display: grid;
+            grid-template-columns: 50% 50%;
+        }
+
+    /* End of main section */
+}
+@media screen and (max-width:750px) { 
+    #intro{
+        text-align: center;
+        max-width: 70%;
+        gap: 8em;
+        top: 12em;
+    }   
+}
+@media screen and (max-width:600px) {
+    #intro{
+        top: 9em;
+    }
+}
+@media screen and (max-width:460px) {   
+    #intro{
+        top: 10em;
+    }
+        #intro h1{
+            font-size: 4rem;
+        }
+}
