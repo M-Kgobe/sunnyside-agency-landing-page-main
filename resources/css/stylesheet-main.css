@@ -38,7 +38,7 @@ button{
     outline: none;
     border: none;
 }
-.mobile-images,.hamburger,.nav-links svg{
+.mobile-images,.hamburger,.nav-links li.svg{
     display: none;
 }
 
@@ -243,7 +243,7 @@ font-family: 'Fraunces', serif;
             background: url("../images/desktop/image-graphic-design.jpg");
             background-size: cover;
         }
-        .cherry h4{
+        .cherry h3{
             color: hsl(168, 56%, 15%);
             font-size: 2rem;
         }
@@ -256,7 +256,7 @@ font-family: 'Fraunces', serif;
             background: url("../images/desktop/image-photography.jpg");
             background-size: cover;
         }
-        .orange h4{
+        .orange h3{
             font-size: 2rem;
             color: hsl(198, 50%, 20%);
         }
@@ -277,7 +277,7 @@ font-family: 'Fraunces', serif;
         padding: 5em 3em;
         gap: 4em;
     }
-        #services h3{
+        #services h4{
             font-size: 2rem;
             color: hsl(210, 4%, 67%);
             text-transform: uppercase;
