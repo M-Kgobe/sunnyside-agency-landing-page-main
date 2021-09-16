@@ -161,6 +161,9 @@
     #intro{
         top: 9em;
     }
+    .box-fruits p{
+        max-width: 90%;
+    }
 }
 @media screen and (max-width:460px) {   
     #intro{
@@ -169,4 +172,7 @@
         #intro h1{
             font-size: 4rem;
         }
+    .cherry,.orange{
+        background-size: 100% 100%;
+    }
 }
